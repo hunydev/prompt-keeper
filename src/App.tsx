@@ -641,10 +641,19 @@ function AppContent() {
 
         {/* 푸터 */}
         <footer className="mt-12 pt-8 border-t border-border">
-          <p className="text-center text-sm text-muted-foreground">
-            Prompt Keeper - 재사용 가능한 AI 프롬프트 관리
-          </p>
-        </footer>
+  <div className="text-center text-sm text-muted-foreground space-y-1">
+    <p>Prompt Keeper - 재사용 가능한 AI 프롬프트 관리</p>
+    <p>
+      서비스 주소: <a href="https://prompts.huny.dev" className="underline hover:text-primary" target="_blank" rel="noopener noreferrer">prompts.huny.dev</a>
+    </p>
+    <p>
+      관리자: <a href="https://huny.dev" className="underline hover:text-primary" target="_blank" rel="noopener noreferrer">HunyDev</a>
+    </p>
+    <p>
+      GitHub 저장소: <a href="https://github.com/hunydev/prompt-keeper" className="underline hover:text-primary" target="_blank" rel="noopener noreferrer">github.com/hunydev/prompt-keeper</a>
+    </p>
+  </div>
+</footer>
       </div>
       </div>
       
