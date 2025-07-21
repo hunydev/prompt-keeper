@@ -1,0 +1,24 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- 그라데이션 정의 -->
+  <defs>
+    <linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6366F1" />
+      <stop offset="100%" stop-color="#8B5CF6" />
+    </linearGradient>
+    <linearGradient id="gradient2" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#8B5CF6" />
+      <stop offset="100%" stop-color="#EC4899" />
+    </linearGradient>
+  </defs>
+  
+  <!-- 배경 원 -->
+  <circle cx="32" cy="32" r="30" fill="url(#gradient1)" />
+  
+  <!-- 메시지 말풍선 모양 -->
+  <path d="M18 20H46C48.2 20 50 21.8 50 24V36C50 38.2 48.2 40 46 40H38L32 46L26 40H18C15.8 40 14 38.2 14 36V24C14 21.8 15.8 20 18 20Z" fill="white" />
+  
+  <!-- AI 표현하는 선들 -->
+  <path d="M24 26L40 34" stroke="url(#gradient2)" stroke-width="3" stroke-linecap="round" />
+  <path d="M24 34L40 26" stroke="url(#gradient2)" stroke-width="3" stroke-linecap="round" />
+  <circle cx="32" cy="30" r="3" fill="url(#gradient2)" />
+</svg>
