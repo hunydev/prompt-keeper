@@ -6,6 +6,8 @@
 
 **Prompt Keeper**는 자주 사용하는 AI 프롬프트를 저장하고, 쉽게 관리 및 재사용할 수 있도록 도와주는 북마크형 웹앱입니다. 반복적으로 사용하는 프롬프트를 한 곳에 모아두고, 필요할 때 빠르게 불러와 사용할 수 있습니다.
 
+이 프로젝트는 현재 <a href="https://prompts.huny.dev" target="_blank">https://prompts.huny.dev</a> 에서 서비스되고 있습니다.
+
 이 프로젝트는 Netlify 환경에 최적화되어 있으며, Netlify Functions와 Netlify Blobs를 활용하여 서버리스 방식으로 데이터를 저장하고 관리합니다. Netlify에서 구동되어야만 정상적으로 동작합니다.
 
 ## 주요 특징
