@@ -1,0 +1,48 @@
+{
+  "name": "Prompt Keeper",
+  "short_name": "Prompt Keeper",
+  "description": "AI 프롬프트를 체계적으로 관리하고 재사용할 수 있는 스마트한 웹 애플리케이션",
+  "start_url": "https://prompts.huny.dev/",
+  "id": "https://prompts.huny.dev/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#000000",
+  "orientation": "portrait-primary",
+  "scope": "https://prompts.huny.dev/",
+  "lang": "ko",
+  "dir": "ltr",
+  "categories": ["productivity", "utilities"],
+  "icons": [
+    {
+      "src": "/logo.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/logo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "새 프롬프트 추가",
+      "short_name": "새 프롬프트",
+      "description": "새로운 AI 프롬프트를 빠르게 추가합니다",
+      "url": "/?action=new",
+      "icons": [
+        {
+          "src": "/logo.png",
+          "sizes": "96x96"
+        }
+      ]
+    }
+  ],
+  "prefer_related_applications": false,
+  "related_applications": [],
+  "edge_side_panel": {
+    "preferred_width": 400
+  }
+}

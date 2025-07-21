@@ -4,7 +4,7 @@ import { exportPrompts, importPrompts, convertImportToPrompt } from '@/lib/expor
 import { getSessionId, getSavedUsername, clearUserCredentials } from '@/lib/session';
 import { SessionDialog } from '@/components/SessionDialog';
 import { SessionIndicator } from '@/components/SessionIndicator';
-
+import { PWAInstallButton } from '@/components/PWAInstallButton';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { PromptCard } from '@/components/PromptCard';
@@ -656,6 +656,7 @@ function AppContent() {
       </div>
       </div>
       
+      <PWAInstallButton />
 
       <SessionDialog
         open={showSessionDialog}
