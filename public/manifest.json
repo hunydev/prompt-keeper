@@ -20,16 +20,16 @@
       "purpose": "any"
     },
     {
-      "src": "/logo.png",
+      "src": "/logo-192x192.png",
       "sizes": "192x192",
       "type": "image/png",
-      "purpose": "any"
+      "purpose": "any maskable"
     },
     {
-      "src": "/logo.png",
+      "src": "/logo-512x512.png",
       "sizes": "512x512",
       "type": "image/png",
-      "purpose": "any"
+      "purpose": "any maskable"
     }
   ],
   "shortcuts": [
@@ -40,8 +40,8 @@
       "url": "/?action=new",
       "icons": [
         {
-          "src": "/logo.png",
-          "sizes": "75x76"
+          "src": "/logo-192x192.png",
+          "sizes": "192x192"
         }
       ]
     }
