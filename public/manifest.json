@@ -15,7 +15,7 @@
   "icons": [
     {
       "src": "/logo.png",
-      "sizes": "any",
+      "sizes": "75x76",
       "type": "image/png",
       "purpose": "any"
     }
@@ -29,7 +29,7 @@
       "icons": [
         {
           "src": "/logo.png",
-          "sizes": "any"
+          "sizes": "75x76"
         }
       ]
     }
