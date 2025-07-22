@@ -1,27 +1,55 @@
-// 서비스 워커 - PWA 설치 지원용 (오프라인 캐싱 없음)
+// 서비스 워커 - PWA 설치 지원용
 const CACHE_NAME = 'prompt-keeper-v1';
+const urlsToCache = ['/'];
 
-// 설치 이벤트 - 기본적인 설치만 처리
+// 설치 이벤트
 self.addEventListener('install', (event) => {
-  console.log('Service Worker: Install');
-  // 즉시 활성화
-  self.skipWaiting();
+  console.log('[SW] Install');
+  event.waitUntil(
+    caches.open(CACHE_NAME)
+      .then((cache) => {
+        console.log('[SW] Caching app shell');
+        return cache.addAll(urlsToCache);
+      })
+      .then(() => {
+        console.log('[SW] Skip waiting');
+        return self.skipWaiting();
+      })
+  );
 });
 
 // 활성화 이벤트
 self.addEventListener('activate', (event) => {
-  console.log('Service Worker: Activate');
-  // 즉시 클라이언트 제어
-  event.waitUntil(self.clients.claim());
+  console.log('[SW] Activate');
+  event.waitUntil(
+    caches.keys().then((cacheNames) => {
+      return Promise.all(
+        cacheNames.map((cacheName) => {
+          if (cacheName !== CACHE_NAME) {
+            console.log('[SW] Deleting old cache:', cacheName);
+            return caches.delete(cacheName);
+          }
+        })
+      );
+    }).then(() => {
+      console.log('[SW] Claiming clients');
+      return self.clients.claim();
+    })
+  );
 });
 
-// 페치 이벤트 - 네트워크 우선 (오프라인 캐싱 없음)
+// 페치 이벤트 - 네트워크 우선
 self.addEventListener('fetch', (event) => {
-  // 단순히 네트워크 요청을 그대로 전달
-  event.respondWith(fetch(event.request));
+  event.respondWith(
+    fetch(event.request)
+      .catch(() => {
+        // 네트워크 실패 시 캐시에서 찾기
+        return caches.match(event.request);
+      })
+  );
 });
 
-// PWA 설치 프롬프트 관련 메시지 처리
+// 메시지 처리
 self.addEventListener('message', (event) => {
   if (event.data && event.data.type === 'SKIP_WAITING') {
     self.skipWaiting();
